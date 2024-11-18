@@ -21,11 +21,10 @@ def count_occurrences(lst, element):
     count = 0
 
     for num in lst:
-        if num == 2:
+        if num == element:
             count += 1
     return count
     
-
 def get_keys_with_value(dct, value):
     """
     Returns a list of keys that have the given value in the dictionary.
