@@ -31,9 +31,9 @@ class TestDataStructures(unittest.TestCase):
         self.assertEqual(find_second_largest([5]), None)
 
     def test_is_anagram(self):
-        self.assertTrue(is_anagram("listen", "silent"))
-        self.assertTrue(is_anagram("anagram", "nagaram"))
-        self.assertFalse(is_anagram("hello", "world"))
+        self.assertTrue(is_anagram("listen", "silent"), True)
+        self.assertTrue(is_anagram("anagram", "nagaram"), True)
+        self.assertFalse(is_anagram("hello", "world"), False)
 
     def test_flatten_list(self):
         self.assertEqual(flatten_list([[1, 2], [3, 4]]), [1, 2, 3, 4])

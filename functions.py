@@ -8,6 +8,8 @@ def reverse_list(lst):
     """
     pass  # Implement this
 
+    return list(reversed(lst))
+
 def count_occurrences(lst, element):
     """
     Counts how many times the given element appears in the list.
@@ -16,6 +18,13 @@ def count_occurrences(lst, element):
     :return: Integer count of occurrences.
     """
     pass  # Implement this
+    count = 0
+
+    for num in lst:
+        if num == 2:
+            count += 1
+    return count
+    
 
 def get_keys_with_value(dct, value):
     """
@@ -26,6 +35,14 @@ def get_keys_with_value(dct, value):
     """
     pass  # Implement this
 
+    result = []
+
+    for i in dct.items():
+        if i[1] == value:
+            result.append(i[0])
+    return result
+
+
 def merge_sorted_lists(lst1, lst2):
     """
     Merges two sorted lists into one sorted list.
@@ -34,6 +51,17 @@ def merge_sorted_lists(lst1, lst2):
     :return: Merged sorted list.
     """
     pass  # Implement this
+    
+    result = []
+
+    for i in lst1:
+        result.append(i)
+
+    for j in lst2:
+        result.append(j)
+
+    return sorted(result)
+
 
 def find_second_largest(numbers):
     """
@@ -42,6 +70,20 @@ def find_second_largest(numbers):
     :return: The second largest integer.
     """
     pass  # Implement this
+    
+    res = []
+
+    for i in numbers:
+        large = max(numbers)
+
+        if i < large:
+            res.append(i)
+
+    if len(res) == 0:
+        return None
+    else:
+        return max(res)
+
 
 def is_anagram(str1, str2):
     """
@@ -56,6 +98,11 @@ def is_anagram(str1, str2):
     :return: True if the strings are anagrams, False otherwise.
     """
     pass  # Implement this
+    
+    for i in str1:
+        if i in str2:
+            return True
+        return False
 
 
 def flatten_list(nested_list):
@@ -65,6 +112,15 @@ def flatten_list(nested_list):
     :return: A flat list with all elements.
     """
     pass  # Implement this
+    res = []
+
+    for i in nested_list:
+        if type(i) == list:
+            for j in i:
+                res.append(j)
+        else:
+            res.append(i)
+    return res
 
 
 def remove_duplicates(lst):
@@ -75,6 +131,15 @@ def remove_duplicates(lst):
     """
     pass  # Implement this
 
+    result = []
+
+    for i in lst:
+        if i not in result:
+            result.append(i)
+    
+    return result
+
+
 def find_common_elements(lst1, lst2):
     """
     Finds common elements between two lists.
@@ -83,3 +148,11 @@ def find_common_elements(lst1, lst2):
     :return: List of common elements.
     """
     pass  # Implement this
+    
+    res = []
+
+    for i in lst1:
+        if i in lst2:
+            res.append(i)
+
+    return res
